@@ -8,6 +8,21 @@ This script, automatically reaches out to CDW's B2B FTP Server to download and a
 
 This is a self contained file, that we use with custom Snipe-IT asset fields to automatically import our CDW purchases into Snipe-IT (dockerized). We have been using this tool for ~2 years now in production.
 
+This was mainly developed for use with the dockerized version of Snipe-IT. 
+
+
+## How to run
+`cdw.py` should be placed on the host or in a sidecar container, with a cron job that runs it at a set schedule. 
+`snipeit_cdw_asset_import.sh` should be placed inside the docker volume mount for `/etc/cron.*` so that Snipe-IT will continue to process the shell script.
+
+The way that we have traditionally done this (we have not revised our ITAM system in some time, and this could use some improvement), was by creating bind mounts in the following locations:
+```
+"/snipeit/cron.daily:/etc/cron.daily",
+"/snipeit/cron.hourly:/etc/cron.hourly",
+"/snipeit/assetmanagement/output:/assetmanagement"
+```
+ 
+
 ### Arguments
 All are strings unless otherwise noted.
 ```
