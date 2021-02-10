@@ -1,7 +1,7 @@
 asn1crypto==0.24.0
 bcrypt==3.1.4
 cffi==1.11.5
-cryptography==3.2
+cryptography==3.3.2
 idna==2.7
 numpy==1.15.1
 pandas==0.23.4
