@@ -6,7 +6,7 @@ idna==3.7
 numpy==1.22.0
 pandas==0.23.4
 paramiko==3.4.0
-pyasn1==0.4.4
+pyasn1==0.6.3
 pycparser==2.18
 PyNaCl==1.6.2
 pysftp==0.2.9
